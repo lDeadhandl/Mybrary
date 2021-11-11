@@ -30,9 +30,6 @@ router.post("/", async (req, res) => {
     name: req.body.name,
   })
   try {
-    const newAuthor = await author.save()
-    // res.redirect(`authors/${newAuthor.id}`)
-    res.redirect(`authors`)
   } catch {
     res.render("authors/new", {
       author: author,
